@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "287380940324",
+    "firebase_url": "https://d-mountain-landscape.firebaseio.com",
+    "project_id": "d-mountain-landscape",
+    "storage_bucket": "d-mountain-landscape.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287380940324:android:616da689e91ca10c",
+        "android_client_info": {
+          "package_name": "com.mountainlandscape"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "287380940324-nrl386k8f25g2jiq95k44qblugjpni7a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtJwtxDqu1f1Bi8VnKQ2oHPs3lMYIuQ8Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "287380940324-nrl386k8f25g2jiq95k44qblugjpni7a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

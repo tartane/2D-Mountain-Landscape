@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary">
+    <RelativeLayout
+        android:id="@+id/relLayLayers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <View
+                android:id="@+id/viewPadding"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/blue_theme_first_layer"
+                android:layout_alignParentBottom="true"/>
+
+            <HorizontalScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/viewPadding">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tint="@color/blue_theme_first_layer"
+                        android:src="@drawable/mountain_layer_3_crop" />
+
+                </RelativeLayout>
+
+            </HorizontalScrollView>
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+            <HorizontalScrollView
+                android:id="@+id/scrollView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tint="@color/blue_theme_first_layer"
+                        android:src="@drawable/mountain_layer_1_crop" />
+
+                </RelativeLayout>
+
+            </HorizontalScrollView>
+
+            <View
+                android:id="@+id/viewPadding2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/blue_theme_first_layer"
+                android:layout_alignParentBottom="true"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

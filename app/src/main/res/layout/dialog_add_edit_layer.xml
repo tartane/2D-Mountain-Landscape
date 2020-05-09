@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimary">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtDialogTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:textColor="#fff"
+            tools:text="Add Layer"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtDialogTitle"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_text_color"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/layer_name"/>
+
+                <EditText
+                    android:id="@+id/edtLayerName"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_text_color"
+                    tools:text="Layer 1"/>
+            </LinearLayout>
+
+            <com.mountainlandscape.custom.RecursiveRadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp">
+
+                        <ImageView
+                            android:id="@+id/imgMountain1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerCrop"
+                            android:layout_marginLeft="40dp"
+                            android:alpha="0.9"
+                            android:src="@drawable/mountain_layer_1_crop"/>
+
+                        <RadioButton
+                            android:id="@+id/chkLayerMountain1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:layout_centerVertical="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp">
+                        <ImageView
+                            android:id="@+id/imgMountain2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerCrop"
+                            android:layout_marginLeft="40dp"
+                            android:alpha="0.9"
+                            android:src="@drawable/mountain_layer_2_crop"/>
+
+                        <RadioButton
+                            android:id="@+id/chkLayerMountain2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:layout_centerVertical="true" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/imgMountain3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerCrop"
+                            android:layout_marginLeft="40dp"
+                            android:alpha="0.9"
+                            android:src="@drawable/mountain_layer_3_crop"/>
+
+                        <ImageView
+                            android:id="@+id/imgMountain3Shadow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerCrop"
+                            android:alpha="0.1"
+                            android:tint="@android:color/black"
+                            android:layout_marginLeft="40dp"
+                            android:src="@drawable/mountain_layer_3_shadow_crop"/>
+                        <RadioButton
+                            android:id="@+id/chkLayerMountain3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:layout_centerVertical="true" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </com.mountainlandscape.custom.RecursiveRadioGroup>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/round_white_outline_button"
+                    android:textColor="#fff"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/cancel"/>
+
+                <Button
+                    android:id="@+id/btnDelete"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_white_outline_button"
+                    android:textColor="#fff"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/delete"/>
+
+                <Button
+                    android:id="@+id/btnSaveLayer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/round_white_outline_button"
+                    android:textColor="#fff"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/save"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

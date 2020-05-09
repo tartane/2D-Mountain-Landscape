@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+    <include layout="@layout/toolbar" />
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/adView"
+        tools:context=".MainActivity"
+        tools:openDrawer="end">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/relLayMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                        <com.mountainlandscape.custom.CanvasView
+                            android:id="@+id/canvasView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:background="@color/blue_theme_background"/>
+
+                        <ImageView
+                            android:id="@+id/imgPlanet"
+                            android:layout_width="@dimen/moon_size"
+                            android:layout_height="@dimen/moon_size"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/planet"/>
+
+                        <ImageView
+                            android:id="@+id/imgPlanetCrater"
+                            android:layout_width="@dimen/moon_size"
+                            android:layout_height="@dimen/moon_size"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/planet_crater"/>
+
+                        <RelativeLayout
+                            android:id="@+id/relLayLayers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true">
+
+                        </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txtWatermarkLeft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:alpha="0.175"
+                        android:text="@string/wallpaper_made_by_2d_mountain_landscape"/>
+
+                    <TextView
+                        android:id="@+id/txtWatermarkRight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:layout_marginRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:alpha="0.175"
+                        android:text="@string/wallpaper_made_by_2d_mountain_landscape"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relLayMenuContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="@color/colorPrimary">
+                <fragment
+                    android:id="@+id/fragCanvasMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    class="com.mountainlandscape.fragments.CanvasMenuFragment"/>
+        </RelativeLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/main" />
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+    <!--live adUnitId ca-app-pub-1711939686174574/8738698942
+    test adUnitId ca-app-pub-3940256099942544/6300978111-->
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_adUnitId">
+    </com.google.android.gms.ads.AdView>
+</RelativeLayout>

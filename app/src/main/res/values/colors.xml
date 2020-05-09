@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3d3d3d</color>
+    <color name="colorPrimaryDark">#2d2d2d</color>
+    <color name="colorAccent">#FFF</color>
+    <color name="white_text_color">#FFF</color>
+    <color name="white_label_text_color">#e6e6e6</color>
+    <color name="blue_outerspace">#2f3640</color>
+
+    <!--blue theme-->
+    <color name="blue_theme_background">#121830</color>
+    <color name="blue_theme_first_layer">#131728</color>
+    <color name="blue_theme_last_layer">#242a50</color>
+
+    <!--sunny theme-->
+    <color name="sunny_theme_sun">#ffffd1</color>
+    <color name="sunny_theme_background">#fedbc7</color>
+    <color name="sunny_theme_first_layer">#7c0032</color>
+    <color name="sunny_theme_last_layer">#ff6c40</color>
+
+    <!--green theme-->
+    <color name="green_theme_sun">#ffffd1</color>
+    <color name="green_theme_background">#e4ff7c</color>
+    <color name="green_theme_first_layer">#055548</color>
+    <color name="green_theme_last_layer">#3fa566</color>
+
+    <!--purple theme-->
+    <color name="purple_theme_moon">#e0f9f6</color>
+    <color name="purple_theme_background_start">#78abe6</color>
+    <color name="purple_theme_background_end">#001934</color>
+    <color name="purple_theme_first_layer">#01002a</color>
+    <color name="purple_theme_last_layer">#5d0e5f</color>
+
+    <!--blue winter theme-->
+    <color name="blue_winter_theme_moon">#F5FFFD</color>
+    <color name="blue_winter_theme_background">#a6ccfe</color>
+    <color name="blue_winter_theme_first_layer">#22425d</color>
+    <color name="blue_winter_theme_last_layer">#67a0e6</color>
+</resources>

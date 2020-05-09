@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".live_wallpaper.settings.SnowfallSettingsFragment">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/linLaySnowFlake"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_margin="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtFPS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="@string/animation_frame_per_seconds"/>
+
+
+        <Spinner
+            android:id="@+id/spinnerFPS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:entries="@array/fps_array"></Spinner>
+
+        <TextView
+            android:id="@+id/txtSnowFlakesSpeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="@string/snowflakes_fall_speed_range_10_20"/>
+
+        <me.bendik.simplerangeview.SimpleRangeView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/snowFlakesSpeedRangeBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            app:count="31"
+            app:start="10"
+            app:end="20"
+            app:movable="true"
+            app:minDistance="2"
+            app:lineColor="@color/white_label_text_color"
+            app:activeLineColor="@color/colorPrimary"
+            app:activeThumbColor="@color/colorPrimary"/>
+
+        <TextView
+            android:id="@+id/txtSnowFlakesSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="@string/snowflakes_size_range_4_12"/>
+
+        <me.bendik.simplerangeview.SimpleRangeView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/snowFlakesSizeRangeBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            app:count="29"
+            app:start="4"
+            app:end="12"
+            app:movable="true"
+            app:minDistance="4"
+            app:activeLineColor="@color/colorPrimary"
+            app:activeThumbColor="@color/colorPrimary"/>
+
+        <TextView
+            android:id="@+id/txtSnowflakeCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="@string/snowflakes_count_100"/>
+
+        <com.warkiz.widget.IndicatorSeekBar
+            android:id="@+id/seekBarSnowflakeCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isb_thumb_color="@color/colorPrimary"
+            app:isb_indicator_color="@color/colorPrimary"
+            app:isb_indicator_text_color="@color/white_label_text_color"
+            app:isb_track_progress_color="@color/colorPrimary"
+            app:isb_track_background_color="@color/white_label_text_color"
+            app:isb_min="50"
+            app:isb_max="300"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/linLaySnowFlake"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnRestoreDefault"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/round_black_outline_button"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="@string/restore_default"/>
+
+        <Button
+            android:id="@+id/btnApply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/round_black_outline_button"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="@string/apply"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

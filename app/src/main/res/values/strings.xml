@@ -1,0 +1,210 @@
+<resources>
+    <string name="admob_appid">ca-app-pub-1711939686174574~5678740853</string>
+    <string name="app_name">2D Mountain Landscape</string>
+    <string name="settings">Settings</string>
+    <string name="add_layer">Add Layer</string>
+
+    <string-array name="layers_array">
+        <item>Mountain 1</item>
+        <item>Mountain 2</item>
+        <item>Mountain 3</item>
+    </string-array>
+
+    <string-array name="fps_array">
+        <item>15 fps</item>
+        <item>30 fps</item>
+        <item>45 fps</item>
+        <item>60 fps</item>
+    </string-array>
+
+    <string-array name="presets_array">
+        <item>Custom</item>
+        <item>Blue night theme</item>
+        <item>Red sunny theme</item>
+        <item>Green forest theme</item>
+        <item>Purple night theme</item>
+    </string-array>
+
+    <string-array name="slideshow_transition_time">
+        <item>5 seconds</item>
+        <item>15 seconds</item>
+        <item>30 seconds</item>
+        <item>1 minute</item>
+        <item>5 minutes</item>
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>5 hours</item>
+        <item>Every day</item>
+    </string-array>
+
+    <string name="layer">Layer</string>
+    <string name="error_layer_name_required">Layer name is required.</string>
+    <string name="error_layer_name_greater_than_50">Layer name must be less than 50 characters.</string>
+    <string name="high_mountains_with_shadows">High mountains with shadow</string>
+    <string name="mountains_1">Mountains 1</string>
+    <string name="mountains_2">Mountains 2</string>
+    <string name="theme_preset">Theme preset</string>
+    <string name="layers">Layers</string>
+    <string name="edit_layer">Edit layer</string>
+    <string name="layer_offset">Layer offset</string>
+    <string name="start_color">Start color</string>
+    <string name="end_color">End color</string>
+    <string name="background_color">Background color</string>
+    <string name="background_start_color">Background start color</string>
+    <string name="planet_color">Planet color</string>
+    <string name="show_planet_craters">Show planet craters</string>
+    <string name="change_color">Change color...</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="save_and_set_as_wallpaper">Save and set as wallpaper</string>
+    <string name="save_on_device">Save on device</string>
+    <string name="set_as_wallpaper">Set as wallpaper</string>
+    <string name="save_options">Save options</string>
+    <string name="background_end_color">Background end color</string>
+    <string name="enable_background_gradient_color">Enable background gradient color</string>
+    <string name="layer_start_color">Layer start color</string>
+    <string name="layer_end_color">Layer end color</string>
+    <string name="save_preset">Save Preset</string>
+    <string name="preset_name">Preset name</string>
+    <string name="error_preset_name_required">Preset name is required.</string>
+    <string name="preset_toast">Preset \"%s\" has been saved</string>
+    <string name="upgrade_to_pro">Upgrade to pro</string>
+    <string name="rate_the_app">Rate the app</string>
+    <string name="about">About</string>
+    <string name="ok">Ok</string>
+    <string name="show_planet">Show planet</string>
+    <string name="confirm_delete_preset">Confirm delete preset</string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
+    <string name="are_you_sure_you_want_to_delete">Are you sure you want to delete %s?</string>
+    <string name="title_activity_live_wallpaper_settings">Settings</string>
+    <string name="mountain_landscape_live_wallpaper">2D mountain landscape live wallpaper</string>
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="configure_live_wallpaper">Configure live wallpaper</string>
+    <string name="swipe_to_open_menus">Swipe right/left to open menus</string>
+    <string name="set_full_screen">Set full screen</string>
+    <string name="number_of_stars">Number of stars</string>
+    <string name="stars_color">Stars color</string>
+    <string name="unable_to_connect_to_google_play">Unable to connect with Google Play.</string>
+    <string name="retry">RETRY</string>
+    <string name="dismiss">DISMISS</string>
+    <string name="you_already_own_that_item_purchase_restored">You already own that item. Your purchase has been restored.</string>
+    <string name="error_unknown_with_purchase">An error has occurred with your purchase, please try again.</string>
+    <string name="error_must_select_layer_type">You must select a layer type.</string>
+    <string name="delete">Delete</string>
+    <string name="confirm_delete_layer">Are you sure you want to remove layer</string>
+    <string name="blue_night_theme">Blue night theme</string>
+    <string name="red_sunny_theme">Red sunny theme</string>
+    <string name="green_forest_theme">Green forest theme</string>
+    <string name="purple_night_theme">Purple night theme</string>
+    <string name="blue_winter_theme">Blue winter theme</string>
+    <string name="custom">Custom</string>
+    <string name="you_dont_have_custom_preset">You currently don\'t have any custom preset. Press the Save Preset button in the menu to add one.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="snowfall_settings">Snowfall settings</string>
+    <string name="slideshow_settings">Slideshow settings</string>
+    <string name="live_wallpaper_settings">Live wallpaper settings</string>
+    <string name="apply">apply</string>
+    <string name="transition_time">Transition time</string>
+    <string name="upgrade">Upgrade</string>
+    <string name="you_re_awesome">You\'re awesome!</string>
+    <string name="thank_you">Thank you!</string>
+    <string name="you_have_now_have_access_to_feature">You have now access the following features: \n   \u2022  Live wallpapers\n   \u2022  Remove the watermarks\n   \u2022  No ads\n   \u2022  A drink for the developer (of course)</string>
+    <string name="by_upgrading_to_pro_you_will_get_the_following">By upgrading to pro, you will get the following: \n   \u2022  Access to live wallpapers\n   \u2022  Remove the watermarks\n   \u2022  No ads\n   \u2022  A drink for the developer (of course)</string>
+    <string name="add_a_beautiful_snowfall_animation">Add a beautiful snowfall animation to your wallpaper. You can modify the speed, size and color of the snowflakes.</string>
+    <string name="snowfall">Snowfall</string>
+    <string name="presets_slideshow">Presets slideshow</string>
+    <string name="the_perfect_option_if_you_like_more_than_one_wallpaper">The perfect option if you like more than one wallpaper. Choose the presets you want to display in the slideshow. You can customize the speed at which they change.</string>
+    <string name="current">Current</string>
+    <string name="_2d_mountain_landscape">2D Mountain Landscape</string>
+    <string name="planet">Planet</string>
+    <string name="layer_name">Layer name:</string>
+    <string name="wallpaper_made_by_2d_mountain_landscape">Wallpaper made by 2d mountain landscape</string>
+    <string name="restore_default">Restore Default</string>
+    <string name="animation_frame_per_seconds">Animation frame per seconds</string>
+    <string name="snowflakes_fall_speed_range_10_20">Snowflakes fall speed range (10, 20)</string>
+    <string name="snowflakes_size_range_4_12">Snowflakes size range (4, 12)</string>
+    <string name="snowflakes_count_100">Snowflakes count (100)</string>
+    <string name="home_screen">Home screen</string>
+    <string name="home_and_lock_screens">Home and lock screens</string>
+    <string name="lock_screen">Lock screen</string>
+    <string name="home_screen_wallpaper_has_been_set">Home screen wallpaper as been set.</string>
+    <string name="lock_screen_wallpaper_has_been_set">Lock screen wallpaper has been set</string>
+    <string name="home_and_lock_screen_wallpaper_have_been_set">Home and lock screen wallpaper have been set</string>
+    <string name="wallpaper_has_been_set">Wallpaper has been set</string>
+    <string name="about_text">2d Mountain Landscape was created on spare time by a one developer. The goal was to create an app with fully customizable assets to create a good looking and simple wallpaper. The first idea was to create a fully generator mountain wallpaper, but then the idea merge into reusable and customizable assets. More assets, animations and presets will be added in the future. ♥</string>
+    <string name="upgrade_pro_access_feature">Upgrade to pro to get access to this feature.</string>
+</resources>

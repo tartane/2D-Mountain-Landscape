@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:background="@color/colorPrimary"
+    tools:context=".fragments.CanvasMenuFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/chkFullScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft = "5dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white_text_color"
+            android:text="@string/set_full_screen"/>
+
+        <LinearLayout
+            android:id="@+id/linLayThemePreset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:orientation="vertical">
+            <TextView
+                style="@style/LabelTextView"
+                android:text="@string/theme_preset" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+                <TextView
+                    android:id="@+id/txtPreset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_text_color"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    tools:text="Blue Night Theme" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/txtPreset"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dp"
+                    app:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSavePreset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/save_preset"/>
+
+        <include layout="@layout/separator"></include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:orientation="vertical">
+            <TextView
+                style="@style/LabelTextView"
+                android:text="@string/layers" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvLayers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btnAddLayer"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/add_layer"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:orientation="vertical">
+            <TextView
+                style="@style/LabelTextView"
+                android:text="@string/layer_offset" />
+
+            <com.warkiz.widget.IndicatorSeekBar
+                android:id="@+id/seekBarOffset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:isb_thumb_color="@android:color/white"
+                app:isb_indicator_color="@android:color/white"
+                app:isb_indicator_text_color="@android:color/black"
+                app:isb_track_progress_color="@android:color/white"
+                app:isb_track_background_color="@android:color/black"
+                app:isb_min="10"
+                app:isb_max="200"/>
+        </LinearLayout>
+
+        <include layout="@layout/separator"></include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txtBackgroundStartColorLabel"
+                style="@style/LabelTextView"
+                android:text="@string/background_color" />
+
+            <RelativeLayout
+                android:id="@+id/relLayBackgroundStartColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:clickable="true">
+                <View
+                    android:id="@+id/viewBackgroundStartColor"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    tools:background="@color/green_theme_first_layer"></View>
+                <TextView
+                    android:id="@+id/txtBackgroundStartColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/viewBackgroundStartColor"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/white_text_color"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/change_color" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linLayBackgroundEndColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:orientation="vertical">
+            <TextView
+                style="@style/LabelTextView"
+                android:text="@string/background_end_color" />
+
+            <RelativeLayout
+                android:id="@+id/relLayBackgroundEndColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:clickable="true">
+                <View
+                    android:id="@+id/viewBackgroundEndColor"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    tools:background="@color/green_theme_first_layer"></View>
+                <TextView
+                    android:id="@+id/txtBackgroundEndColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/viewBackgroundEndColor"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/white_text_color"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/change_color" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/chkGradientColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft = "5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white_text_color"
+            android:text="@string/enable_background_gradient_color"/>
+
+        <include layout="@layout/separator"></include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:orientation="vertical">
+            <TextView
+                style="@style/LabelTextView"
+                android:text="@string/layer_start_color" />
+
+            <RelativeLayout
+                android:id="@+id/relLayStartColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:clickable="true">
+                <View
+                    android:id="@+id/viewStartColor"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    tools:background="@color/green_theme_first_layer"></View>
+                <TextView
+                    android:id="@+id/txtStartColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/viewStartColor"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/white_text_color"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/change_color" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:orientation="vertical">
+            <TextView
+                style="@style/LabelTextView"
+                android:text="@string/layer_end_color" />
+
+            <RelativeLayout
+                android:id="@+id/relLayEndColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:clickable="true">
+                <View
+                    android:id="@+id/viewEndColor"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    tools:background="@color/green_theme_first_layer"></View>
+                <TextView
+                    android:id="@+id/txtEndColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/viewEndColor"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/white_text_color"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/change_color" />
+            </RelativeLayout>
+
+        </LinearLayout>
+        <include layout="@layout/separator"></include>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:orientation="vertical">
+            <TextView
+                style="@style/LabelTextView"
+                android:text="@string/planet" />
+
+            <CheckBox
+                android:id="@+id/chkShowPlanet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft = "5dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white_text_color"
+                android:text="@string/show_planet"/>
+
+            <CheckBox
+                android:id="@+id/chkPlanetCrater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft = "5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white_text_color"
+                android:text="@string/show_planet_craters"/>
+
+            <RelativeLayout
+                android:id="@+id/relLayPlanetColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:clickable="true">
+                <View
+                    android:id="@+id/viewPlanetColor"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    tools:background="@color/green_theme_first_layer"></View>
+                <TextView
+                    android:id="@+id/txtPlanetColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/viewPlanetColor"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/white_text_color"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/change_color" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/separator"></include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:orientation="vertical">
+            <TextView
+                style="@style/LabelTextView"
+                android:text="@string/number_of_stars" />
+
+                <com.warkiz.widget.IndicatorSeekBar
+                    android:id="@+id/seekBarStars"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:isb_max="500"
+                    app:isb_min="0"
+                    app:isb_show_indicator="circular_bubble"
+                    app:isb_thumb_color="@android:color/white"
+                    app:isb_indicator_color="@android:color/white"
+                    app:isb_indicator_text_color="@android:color/black"
+                    app:isb_track_progress_color="@android:color/white"
+                    app:isb_track_background_color="@android:color/black"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:orientation="vertical">
+            <TextView
+                style="@style/LabelTextView"
+                android:text="@string/stars_color"
+                tools:ignore="HardcodedText" />
+
+            <RelativeLayout
+                android:id="@+id/relLayStarsColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:clickable="true">
+                <View
+                    android:id="@+id/viewStarsColor"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    tools:background="@color/green_theme_first_layer"></View>
+                <TextView
+                    android:id="@+id/txtStarsColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/viewStarsColor"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/white_text_color"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/change_color" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
